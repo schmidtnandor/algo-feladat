@@ -1,0 +1,26 @@
+Designprojekt – A6 csapat csomagja
+11. évfolyam design tervezés 2026 ősz
+
+Tagok: Csankó Dominik, Schmidt Nándor
+Határidő: 2026. december 4. (péntek) 9:00 (Google Classroom)
+
+Mi mire való?
+
+  feladatlap.html    A feladatotok: kihúzott lapok, ütemezés, tesztek, leadási szabályok,
+                     értékelés, tudáskártyák. Nyomtatható. Ezzel kezdjetek!
+  ellenorzo.html     Húzzátok rá a HTML fájlotokat: tesztenként megmutatja az eredményt.
+                     Ide kell beírni a csavarkódot az 1. kontaktóra végén.
+                     Tesztelői mód: a 2. kontaktórán a másik csapat tesztelése.
+                     Kapott hibajegyek: a titeket tesztelő csapat hibajegyeire itt válaszoltok.
+  megbizoi_lap.html  Az 1. kontaktórán ti játsszátok a A1 csapat megbízóját.
+                     Ne mutassátok meg nekik!
+  tesztelendo.html   A 2. kontaktórán a A2 csapat oldalát tesztelitek.
+  onertekeles.html   Csapat-önértékelés a leadás előtt (nem pontozott).
+
+Minden fájl dupla kattintással megnyílik böngészőben (Chrome, Edge, Firefox), internet nélkül.
+
+Leadandó fájlnevek:
+  A6.html
+  A6_terv_1.png ... A6_terv_5.png (vagy JPG, vagy A6_terv.pdf)
+  A6_hibajegyek.json (opcionális)
+  A6_onertekeles.txt

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:">
+<title>Tesztelendő – A2</title>
+<style>
+  :root {
+    --hatter: #f6f7f9; --felulet: #ffffff; --szoveg: #1d2330; --halvany: #5b6577; --keret: #d9dde5;
+    --kiemelo: #2453a6; --kiemelo-hatter: #e8eefb; --figyelem: #8a5a00; --figyelem-hatter: #fff3d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --hatter: #14171d; --felulet: #1d2129; --szoveg: #e7eaf0; --halvany: #a4adbd; --keret: #343a46;
+      --kiemelo: #8fb1f0; --kiemelo-hatter: #1f2a40; --figyelem: #f0c46a; --figyelem-hatter: #352a12;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--hatter); color: var(--szoveg);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .tartaly { max-width: 860px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 8px 0 4px; }
+  h2 { font-size: 20px; margin: 28px 0 10px; }
+  h3 { font-size: 17px; margin: 0 0 6px; }
+  p { margin: 0 0 10px; }
+  .alcim { color: var(--halvany); margin: 0 0 16px; }
+  .kartya { background: var(--felulet); border: 1px solid var(--keret); border-radius: 10px; padding: 14px 16px; margin: 12px 0; break-inside: avoid; }
+  .kartya .pakli { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--kiemelo); }
+  .racs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .racs .kartya { margin: 0; }
+  .szinek { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .szinminta { display: flex; flex-direction: column; align-items: center; font: 12px ui-monospace, Consolas, monospace; }
+  .szinminta span { width: 56px; height: 40px; border-radius: 6px; border: 1px solid var(--keret); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; background: var(--felulet); }
+  th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--keret); vertical-align: top; }
+  th { font-size: 14px; color: var(--halvany); font-weight: 600; }
+  .kod { font-family: ui-monospace, Consolas, monospace; font-size: 13px; white-space: nowrap; }
+  .megjegyzes { color: var(--halvany); font-size: 14px; }
+  .kiemelt { background: var(--kiemelo-hatter); border-color: transparent; }
+  .figyelem { background: var(--figyelem-hatter); color: var(--figyelem); border-color: transparent; }
+  ul { margin: 0 0 10px; padding-left: 22px; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 14px; background: var(--kiemelo-hatter); padding: 1px 5px; border-radius: 4px; }
+  .tablazat { overflow-x: auto; }
+  footer { color: var(--halvany); font-size: 13px; margin: 32px 0 16px; }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    .kartya { border-color: #bbb; }
+    .nyomtatas-nelkul { display: none !important; }
+    h2 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="tartaly">
+<h1>Tesztcsere: a A2 csapat oldalát tesztelitek</h1>
+<p class="alcim">A6 csapat · 2. kontaktóra (2026. november 27. (péntek))</p>
+
+<div class="kartya kiemelt">
+  <p>A tesztelt csapat HTML fájlját helyben kapjátok meg (pendrive vagy e-mail). Nyissátok meg az
+    <code>ellenorzo.html</code>-t, váltsatok a <strong>Tesztelői mód</strong> fülre, húzzátok rá a fájlt, és tesztenként
+    döntsétek el az eredményt. Sikertelen tesztnél írjatok hibajegyet úgy, hogy más is meg tudja ismételni a hibát.</p>
+  <p style="margin:0">A végén mentsétek el a hibajegyeket (<code>hibajegyek_A6_A2.json</code>),
+    és adjátok át a A2 csapatnak. A hibajegyeitek minősége pontot ér.</p>
+</div>
+
+<h2>Kézi tesztek</h2>
+<div class="tablazat"><table>
+  <tr><th>Kód</th><th>Teszt</th></tr>
+<tr><td class="kod">FEL-05-T3</td><td>Semmilyen információt nem jelöl kizárólag szín (pl. a kötelező mezőket felirat vagy jel is mutatja).</td></tr><tr><td class="kod">MEG-17-T2</td><td>Az oldal a megbízói interjún megtudott legalább két rejtett igényt láthatóan figyelembe veszi.</td></tr><tr><td class="kod">PRO-14-T3</td><td>Az elérhetőség egy pillantással látszik.</td></tr></table></div>
+
+<h2>Jó hibajegy</h2>
+<ul>
+  <li><strong>Cím:</strong> egy mondat, mi a hiba („A fő gomb 375 px-en lelóg a képernyőről”).</li>
+  <li><strong>Lépések:</strong> számozva, hogyan lehet előidézni.</li>
+  <li><strong>Elvárt és tényleges eredmény:</strong> mi kellene, és mi történik.</li>
+  <li><strong>Súlyosság:</strong> kritikus / súlyos / közepes / enyhe.</li>
+  <li>Hivatkozzon a tesztre, amelyik nem teljesült.</li>
+</ul>
+<footer>11. évfolyam design tervezés 2026 ősz · Generálva: 2026-11-13 13:18</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:">
+<title>Feladatlap – A6</title>
+<style>
+  :root {
+    --hatter: #f6f7f9; --felulet: #ffffff; --szoveg: #1d2330; --halvany: #5b6577; --keret: #d9dde5;
+    --kiemelo: #2453a6; --kiemelo-hatter: #e8eefb; --figyelem: #8a5a00; --figyelem-hatter: #fff3d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --hatter: #14171d; --felulet: #1d2129; --szoveg: #e7eaf0; --halvany: #a4adbd; --keret: #343a46;
+      --kiemelo: #8fb1f0; --kiemelo-hatter: #1f2a40; --figyelem: #f0c46a; --figyelem-hatter: #352a12;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--hatter); color: var(--szoveg);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .tartaly { max-width: 860px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 8px 0 4px; }
+  h2 { font-size: 20px; margin: 28px 0 10px; }
+  h3 { font-size: 17px; margin: 0 0 6px; }
+  p { margin: 0 0 10px; }
+  .alcim { color: var(--halvany); margin: 0 0 16px; }
+  .kartya { background: var(--felulet); border: 1px solid var(--keret); border-radius: 10px; padding: 14px 16px; margin: 12px 0; break-inside: avoid; }
+  .kartya .pakli { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--kiemelo); }
+  .racs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .racs .kartya { margin: 0; }
+  .szinek { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .szinminta { display: flex; flex-direction: column; align-items: center; font: 12px ui-monospace, Consolas, monospace; }
+  .szinminta span { width: 56px; height: 40px; border-radius: 6px; border: 1px solid var(--keret); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; background: var(--felulet); }
+  th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--keret); vertical-align: top; }
+  th { font-size: 14px; color: var(--halvany); font-weight: 600; }
+  .kod { font-family: ui-monospace, Consolas, monospace; font-size: 13px; white-space: nowrap; }
+  .megjegyzes { color: var(--halvany); font-size: 14px; }
+  .kiemelt { background: var(--kiemelo-hatter); border-color: transparent; }
+  .figyelem { background: var(--figyelem-hatter); color: var(--figyelem); border-color: transparent; }
+  ul { margin: 0 0 10px; padding-left: 22px; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 14px; background: var(--kiemelo-hatter); padding: 1px 5px; border-radius: 4px; }
+  .tablazat { overflow-x: auto; }
+  footer { color: var(--halvany); font-size: 13px; margin: 32px 0 16px; }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    .kartya { border-color: #bbb; }
+    .nyomtatas-nelkul { display: none !important; }
+    h2 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="tartaly">
+<h1>Designprojekt – A6 csapat feladatlapja</h1>
+<p class="alcim">11. évfolyam design tervezés 2026 ősz · 1. csoport (A) · Tagok: Csankó Dominik, Schmidt Nándor</p>
+
+<div class="kartya kiemelt">
+  <p><strong>A feladat röviden.</strong> Egy valódinak tűnő megbízónak terveztek egy egyoldalas weboldalt, egy megadott
+    felhasználói csoportnak, megadott színekkel és egy tervezési megkötéssel. Nem kész weboldalt kell építeni, hanem
+    jól átgondolt tervet és egy egyszerű, önálló HTML-vázat, amely teljesíti a csapatotok tesztjeit.</p>
+  <p style="margin:0"><strong>Leadandó:</strong> egyetlen önálló HTML fájl és 2–5 tervkép
+    (wireframe vagy képernyőkép). Határidő: <strong>2026. december 4. (péntek) 9:00</strong>, a Google Classroomban.</p>
+</div>
+
+<h2>A ti lapjaitok</h2>
+<div class="racs">
+<div class="kartya">
+  <div class="pakli">Megbízó</div>
+  <h3>Diákbüfé</h3>
+<p>Az iskola büféje. Gyorsabb kiszolgálást szeretne a szünetekben.</p></div><div class="kartya">
+  <div class="pakli">Probléma</div>
+  <h3>Elvesznek a régi látogatók</h3>
+<p>Aki egyszer eljött, később elfelejti a megbízót.</p>  <p style="margin-top:10px"><strong>A csapat döntései (pontosító szavazás):</strong></p>
+  <ul><li>Milyen gyakran jön a hírlevél? – <strong>Hetente</strong></li><li>Mit kap ajándékba a feliratkozó? – <strong>Semmit, csak híreket</strong></li></ul>
+</div><div class="kartya">
+  <div class="pakli">Felhasználó</div>
+  <h3>Billentyűzettel navigáló felhasználó</h3>
+<p>Mozgáskorlátozott, egeret nem tud használni, csak billentyűzetet.</p></div><div class="kartya">
+  <div class="pakli">Színcsomag</div>
+  <h3>Tengerparti</h3>
+<p>Csak ezeket a színeket használhatod: #023E8A, #0096C7, #ADE8F4, #FFFFFF. Átlátszóság és a színek világosítása vagy sötétítése nem megengedett.</p>  <div class="szinek">
+<div class="szinminta"><span style="background: #023E8A"></span>#023E8A</div><div class="szinminta"><span style="background: #0096C7"></span>#0096C7</div><div class="szinminta"><span style="background: #ADE8F4"></span>#ADE8F4</div><div class="szinminta"><span style="background: #FFFFFF"></span>#FFFFFF</div>  </div>
+</div><div class="kartya">
+  <div class="pakli">Megkötés</div>
+  <h3>Elérhetőség a láblécben</h3>
+<p>Minden kapcsolati adat a láblécben van.</p></div></div>
+<p class="megjegyzes">A megbízó lapján csak a nyilvános rész szerepel. A többit interjún kell kideríteni: kérdezzetek!
+  Az 1. kontaktóra végén egy „csavar” is érkezik: a megbízó változtatást kér, amit az ellenorzo.html-ben a tanár által
+  bemondott kóddal nyithattok meg.</p>
+
+<h2>Kapcsolatok más csapatokkal</h2>
+<table>
+  <tr><th>Mikor</th><th>Mi történik</th></tr>
+  <tr><td>1. kontaktóra</td><td>
+A ti megbízótokat a <strong>A5</strong> csapat játssza – őket interjúvoljátok meg.
+<br>Ti a <strong>A1</strong> csapat megbízóját játsszátok – lásd <code>megbizoi_lap.html</code>.  </td></tr>
+  <tr><td>2. kontaktóra</td><td>
+Ti a <strong>A2</strong> csapat oldalát tesztelitek (<code>tesztelendo.html</code>, az ellenőrző tesztelői módja).<br>A ti oldalatokat a <strong>A7</strong> csapat teszteli.  </td></tr>
+</table>
+
+<h2>Ütemezés</h2>
+<table>
+  <tr><th>Időpont</th><th>Esemény</th><th>Otthoni feladat utána</th></tr>
+  <tr><td>2026. november 13. (péntek)</td><td>Kiadó óra: csapatalakítás, sorsolás, szavazás</td>
+      <td>Persona, legalább 3 felhasználói történet, 2–3 első wireframe</td></tr>
+  <tr><td>2026. november 20. (péntek)</td><td>1. kontaktóra: megbízói interjúk, visszajelzés a wireframe-ekre, csavarkód</td>
+      <td>A HTML-váz elkészítése, önellenőrzés az ellenorzo.html-lel</td></tr>
+  <tr><td>2026. november 27. (péntek)</td><td>2. kontaktóra: tesztcsere, hibajegyek</td>
+      <td>Javítás, tervképek véglegesítése, önértékelés</td></tr>
+  <tr><td><strong>2026. december 4. (péntek) 9:00</strong></td><td><strong>Közös leadási határidő</strong></td><td></td></tr>
+</table>
+
+<h2>Tesztek</h2>
+<p>A csapatotok 19 tesztet kap: 17 most, 2 a csavarral.
+  A gépi teszteket az <code>ellenorzo.html</code> futtatja: húzzátok rá a HTML fájlotokat. A kézi teszteket a tesztcserén a másik csapat, a végén a tanár bírálja.</p>
+<div class="tablazat"><table>
+  <tr><th>Kód</th><th>Teszt</th><th>Típus</th></tr>
+<tr><td class="kod">ALAP-01</td><td>Az oldal egyetlen önálló fájl: nincs külső CSS, JS, kép vagy betűtípus.</td><td>gépi</td></tr><tr><td class="kod">ALAP-02</td><td>A &lt;html&gt; elemnek van lang attribútuma.</td><td>gépi</td></tr><tr><td class="kod">ALAP-03</td><td>Van viewport meta elem.</td><td>gépi</td></tr><tr><td class="kod">ALAP-04</td><td>Az oldalnak pontosan egy &lt;title&gt; eleme van.</td><td>gépi</td></tr><tr><td class="kod">ALAP-05</td><td>A fájl legfeljebb 2048 KB.</td><td>gépi</td></tr><tr><td class="kod">FEL-09-T1</td><td>Minden &lt;a&gt; elemnek van href attribútuma.</td><td>gépi</td></tr><tr><td class="kod">FEL-09-T2</td><td>Nincs pozitív tabindex érték.</td><td>gépi</td></tr><tr><td class="kod">FEL-09-T3</td><td>Az oldal Tab billentyűvel végigjárható, és mindig látszik, hol a fókusz.</td><td>kézi</td></tr><tr><td class="kod">MEG-16-T1</td><td>A fejlécben vagy a főcímben szerepel a megbízó neve: „Diákbüfé”.</td><td>gépi</td></tr><tr><td class="kod">MEG-16-T2</td><td>Az oldal a megbízói interjún megtudott legalább két rejtett igényt láthatóan figyelembe veszi.</td><td>kézi</td></tr><tr><td class="kod">MEGK-04-T1</td><td>Van &lt;footer&gt; elem.</td><td>gépi</td></tr><tr><td class="kod">MEGK-04-T2</td><td>A láblécben van kattintható e-mail vagy telefonszám.</td><td>gépi</td></tr><tr><td class="kod">PRO-09-T1</td><td>A #hirlevel részben van e-mail mező.</td><td>gépi</td></tr><tr><td class="kod">PRO-09-T2</td><td>Az e-mail mező kötelező (required).</td><td>gépi</td></tr><tr><td class="kod">PRO-09-T3</td><td>Látszik, mit kap és milyen gyakran a feliratkozó.</td><td>kézi</td></tr><tr><td class="kod">SZIN-02-T1</td><td>Minden látható szín (szöveg, háttér, keret) a kapott színcsomagból való.</td><td>gépi</td></tr><tr><td class="kod">SZIN-02-T2</td><td>A színcsomagból legalább 3 színt felhasználsz.</td><td>gépi</td></tr></table></div>
+
+<h2>Leadás</h2>
+<p>A Google Classroom feladatban. Csapatonként elég egy tagnak leadnia a csapat nevében; ha többen is leadják, a legkésőbbi számít. A fájlneveket pontosan így írjátok:</p>
+<ul>
+  <li><code>A6.html</code> – az egyetlen HTML fájl, legfeljebb 2048 KB. A CSS a <code>&lt;style&gt;</code> elemben legyen, kép csak data URI-ként; külső fájl, betűtípus vagy keretrendszer nem használható.</li>
+  <li><code>A6_terv_1.png</code> … <code>A6_terv_5.png</code> (vagy JPG, vagy egyetlen <code>A6_terv.pdf</code>) – 2–5 tervkép, bármilyen módon (papíron fotózva, tervezőeszközben, a HTML képernyőképeként).</li>
+  <li><code>A6_hibajegyek.json</code> – opcionális: a kapott hibajegyekre adott válaszaitok (az ellenőrző „Kapott hibajegyek” fülén készül).</li>
+  <li><code>A6_onertekeles.txt</code> – kért, de nem pontozott (az <code>onertekeles.html</code> készíti).</li>
+</ul>
+
+<h2>Értékelés</h2>
+<p>Minden csapat ugyanazokkal a súlyokkal kap pontot, csapatmérettől és tesztszámtól függetlenül.</p>
+<table>
+  <tr><th>Szempont</th><th>Pont</th><th>Mit mér</th></tr>
+<tr><td>Gépi tesztek</td><td>45</td><td>A sikeres gépi tesztek aránya, a csapat saját tesztszámára normalizálva</td></tr><tr><td>Kézi tesztek</td><td>20</td><td>A 3–4 kézi teszt teljesülése</td></tr><tr><td>Tervképek</td><td>20</td><td>2–5 kép; a kártyák láthatóan megjelennek; a terv és a HTML összhangban (négyfokozatú skála)</td></tr><tr><td>Tesztelői munka</td><td>10</td><td>A másik csapatról írt hibajegyek minősége</td></tr><tr><td>Hibajegyek kezelése</td><td>5</td><td>A kapott hibajegyekre adott státusz és indoklás</td></tr></table>
+
+<h2>Tudáskártyák</h2>
+<div class="racs">
+<div class="kartya"><h3>Mi a persona?</h3><p style="margin:0">Egy kitalált, de valószerű felhasználó leírása: név, kor, mit szeretne elérni, mi zavarja. A tervezésnél mindig őt képzeld magad elé, ne saját magadat.</p></div><div class="kartya"><h3>Felhasználói történet</h3><p style="margin:0">Egy mondat: „Mint [ki], szeretném [mit], hogy [miért].” Csapatonként írjatok legalább hármat, és ezek alapján döntsétek el, mi kerül az oldalra.</p></div><div class="kartya"><h3>Megbízói interjú</h3><p style="margin:0">Nyitott kérdéseket tegyetek fel („Mi a legnagyobb gond…?”), ne eldöntendőket. Jegyzeteljetek. A rejtett igényeket csak kérdezéssel tudjátok meg.</p></div><div class="kartya"><h3>Wireframe</h3><p style="margin:0">Egyszerű vázlat dobozokkal és feliratokkal, színek nélkül. A célja, hogy eldöntsétek, mi hol legyen, mielőtt kódolni kezdtek. Papír is tökéletes.</p></div><div class="kartya"><h3>Színek és kontraszt</h3><p style="margin:0">A szöveg és a háttér kontrasztja legalább 4,5 : 1 legyen (nagy olvasási igénynél 7 : 1). A színcsomagból mindig egy sötét és egy világos színt párosíts szövegnek és háttérnek.</p></div><div class="kartya"><h3>Tipográfia</h3><p style="margin:0">Legfeljebb két betűtípust használj. A címsorok legyenek egyértelműen nagyobbak a szövegnél, a sortávolság kb. 1,5.</p></div><div class="kartya"><h3>Önálló HTML fájl</h3><p style="margin:0">Minden egy fájlban: a CSS a &lt;style&gt; elemben, a képek data URI-ként. Külső betűtípus vagy CSS-keretrendszer nem használható. Script nem fut az ellenőrzőben.</p></div><div class="kartya"><h3>Az ellenőrző használata</h3><p style="margin:0">Nyisd meg az ellenorzo.html-t, és húzd rá a HTML fájlodat. Tesztenként látod az eredményt és egy tippet. A végső pontot a tanári ellenőrzés adja, ugyanígy.</p></div><div class="kartya"><h3>Hibajegy írása</h3><p style="margin:0">Cím, lépések, elvárt és tényleges eredmény, súlyosság. Úgy írd meg, hogy valaki más is meg tudja ismételni a hibát.</p></div></div>
+<footer>11. évfolyam design tervezés 2026 ősz · Generálva: 2026-11-13 13:18</footer>
+</div>
+</body>
+</html>

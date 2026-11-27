@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:">
+<title>Megbízói lap – A1</title>
+<style>
+  :root {
+    --hatter: #f6f7f9; --felulet: #ffffff; --szoveg: #1d2330; --halvany: #5b6577; --keret: #d9dde5;
+    --kiemelo: #2453a6; --kiemelo-hatter: #e8eefb; --figyelem: #8a5a00; --figyelem-hatter: #fff3d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --hatter: #14171d; --felulet: #1d2129; --szoveg: #e7eaf0; --halvany: #a4adbd; --keret: #343a46;
+      --kiemelo: #8fb1f0; --kiemelo-hatter: #1f2a40; --figyelem: #f0c46a; --figyelem-hatter: #352a12;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--hatter); color: var(--szoveg);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .tartaly { max-width: 860px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 8px 0 4px; }
+  h2 { font-size: 20px; margin: 28px 0 10px; }
+  h3 { font-size: 17px; margin: 0 0 6px; }
+  p { margin: 0 0 10px; }
+  .alcim { color: var(--halvany); margin: 0 0 16px; }
+  .kartya { background: var(--felulet); border: 1px solid var(--keret); border-radius: 10px; padding: 14px 16px; margin: 12px 0; break-inside: avoid; }
+  .kartya .pakli { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--kiemelo); }
+  .racs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .racs .kartya { margin: 0; }
+  .szinek { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .szinminta { display: flex; flex-direction: column; align-items: center; font: 12px ui-monospace, Consolas, monospace; }
+  .szinminta span { width: 56px; height: 40px; border-radius: 6px; border: 1px solid var(--keret); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; background: var(--felulet); }
+  th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--keret); vertical-align: top; }
+  th { font-size: 14px; color: var(--halvany); font-weight: 600; }
+  .kod { font-family: ui-monospace, Consolas, monospace; font-size: 13px; white-space: nowrap; }
+  .megjegyzes { color: var(--halvany); font-size: 14px; }
+  .kiemelt { background: var(--kiemelo-hatter); border-color: transparent; }
+  .figyelem { background: var(--figyelem-hatter); color: var(--figyelem); border-color: transparent; }
+  ul { margin: 0 0 10px; padding-left: 22px; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 14px; background: var(--kiemelo-hatter); padding: 1px 5px; border-radius: 4px; }
+  .tablazat { overflow-x: auto; }
+  footer { color: var(--halvany); font-size: 13px; margin: 32px 0 16px; }
+  @media print {
+    body { background: #fff; color: #000; font-size: 12pt; }
+    .kartya { border-color: #bbb; }
+    .nyomtatas-nelkul { display: none !important; }
+    h2 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="tartaly">
+<h1>Megbízói lap: ti vagytok a A1 csapat megbízója</h1>
+<p class="alcim">A6 csapat · 1. kontaktóra (2026. november 20. (péntek))</p>
+
+<div class="kartya figyelem">
+  <p style="margin:0"><strong>Ezt a lapot ne mutassátok meg a A1 csapatnak!</strong>
+    Az interjún ti vagytok a megbízó. Válaszoljatok őszintén arra, amit kérdeznek, de a rejtett részleteket csak akkor
+    mondjátok el, ha rákérdeznek. Ha olyat kérdeznek, ami nincs a lapon, találjatok ki egy életszerű választ, és jegyezzétek fel,
+    hogy következetesek maradjatok.</p>
+</div>
+
+<div class="kartya">
+  <div class="pakli">Megbízó</div>
+  <h3>Kenyérkosár Pékség</h3>
+<p>Családi pékség két üzlettel. Azt szeretné, hogy a vásárlók előre tudják, mi kapható.</p>  <p style="margin-top:10px"><strong>Rejtett részletek</strong> – csak akkor mondjátok el, ha rákérdeznek:</p>
+  <ul><li>Reggel 6-kor nyit, a friss kenyér 9-re elfogy.</li><li>A tulajdonos lánya kezeli a közösségi oldalukat.</li><li>Gluténmentes termékeik is vannak, ezekre büszkék.</li><li>Nem akarnak online fizetést.</li></ul>
+</div>
+<h2>Amit a A1 csapat kapott</h2>
+<p class="megjegyzes">Hogy értsétek, mire készülnek. Ezeket ők is látják.</p>
+<div class="racs">
+<div class="kartya">
+  <div class="pakli">Probléma</div>
+  <h3>Nem tudják, mi az aktuális kínálat</h3>
+<p>A látogatók nem tudják előre, mi elérhető és mennyibe kerül.</p>  <p style="margin-top:10px"><strong>A csapat döntései (pontosító szavazás):</strong></p>
+  <ul><li>Hány tétel legyen a kínálatban? – <strong>10</strong></li><li>Hogyan legyen rendezve? – <strong>Kategóriák szerint</strong></li></ul>
+</div><div class="kartya">
+  <div class="pakli">Felhasználó</div>
+  <h3>Nyugdíjas (70 év)</h3>
+<p>Ritkán interneteznek, a telefonon nagyobb betűméretet használnak.</p></div><div class="kartya">
+  <div class="pakli">Színcsomag</div>
+  <h3>Monokróm kék</h3>
+<p>Csak ezeket a színeket használhatod: #03045E, #0077B6, #90E0EF, #CAF0F8. Átlátszóság és a színek világosítása vagy sötétítése nem megengedett.</p>  <div class="szinek">
+<div class="szinminta"><span style="background: #03045E"></span>#03045E</div><div class="szinminta"><span style="background: #0077B6"></span>#0077B6</div><div class="szinminta"><span style="background: #90E0EF"></span>#90E0EF</div><div class="szinminta"><span style="background: #CAF0F8"></span>#CAF0F8</div>  </div>
+</div><div class="kartya">
+  <div class="pakli">Megkötés</div>
+  <h3>Képek nélkül</h3>
+<p>Nem használhatsz képet, csak szöveget, színt és formát.</p></div></div>
+
+<h2>Az interjú menete</h2>
+<ul>
+  <li>Két 20 perces kör: csapatonként egy tag a megbízói lappal marad, a többiek interjúzni mennek; félidőben csere.</li>
+  <li>Ne diktáljátok a megoldást: a megbízó a céljait és a gondjait mondja el, nem a weboldal felépítését.</li>
+  <li>A végén kérdezzétek meg: „Van még valami, amit tudnotok kellene?” – és ha a rejtett részletekből valami kimaradt, adjatok egy apró utalást.</li>
+</ul>
+<footer>11. évfolyam design tervezés 2026 ősz · Generálva: 2026-11-13 13:18</footer>
+</div>
+</body>
+</html>
